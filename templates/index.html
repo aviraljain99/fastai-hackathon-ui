@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>Falkor</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='falkor.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='falkor.jpg') }}" />
+  <h3>Create your story!</h3>
+  <form action="/" method="post">
+
+    <label for="character_name">What is your character's name?</label>
+    <input type="text" name="character_name" id="character_name" placeholder="Enter character name" required />
+
+    <label for="character_type">What is your character?</label>
+    <input type="text" name="character_type" id="character_type" placeholder="Enter character type" required />
+
+    <label for="genre">What genre would you like?</label>
+    <input type="text" name="genre" id="genre" placeholder="Enter genre" required />
+
+    <input type="submit" value="Create a story!" />
+  </form>
+  <!-- {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %} -->
+</body>
