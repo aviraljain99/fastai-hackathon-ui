@@ -9,6 +9,12 @@ class Viewer {
     this.viewerControls = controls;
     this.viewerArray = [...items];
     this.currentPage = 0;
+
+    this.viewerArray.forEach(el => {
+      el.style.display = "none";
+    });
+
+    this.viewerArray[this.currentPage].style.display = "flex";
   }
 
   // setControls() {
@@ -26,12 +32,12 @@ class Viewer {
 
     if (direction.className == 'gallery-controls-previous') {
       if (this.currentPage == 0) {
-        this.currentPage = 4;
+        this.currentPage = this.viewerArray.length - 1;
       } else {
         this.currentPage -= 1;
       }
     } else {
-      if (this.currentPage == 4) {
+      if (this.currentPage == this.viewerArray.length - 1) {
         this.currentPage = 0;
       } else {
         this.currentPage += 1;

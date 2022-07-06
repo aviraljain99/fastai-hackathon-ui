@@ -6,6 +6,14 @@
     width: 500px;
 } */
 
+@font-face {
+    font-family: 'medievalsharpregular';
+    src: url('medievalsharp-regular-webfont.woff2') format('woff2'),
+         url('medievalsharp-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .outer {
   display: table;
   position: absolute;
@@ -33,19 +41,41 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-radius: 15%;
+    box-shadow: 0px 0px 20px 20px grey;
+    height: 600px;
+}
+
+.gallery-item div p {
+    font-family: medievalsharpregular;
+    font-size: 16px;
 }
 
 .gallery-item img {
     border-radius: 5%;
+    width: 200px;
+    height: 200px;
 }
 
-.main-item {
+/* .main-item {
     display: flex;
+} */
+
+.gallery-item .text-container {
+    margin: 10px 10px 10px 10px;
 }
 
-.background-item {
-    display: none;
+.gallery-item .text-container p {
+    text-align: center;
 }
+
+.gallery-item .img-container {
+    margin: 10px 10px 10px 10px;
+}
+
+/* .background-item {
+    display: none;
+} */
 
 /* This is styling the Previous and the Next button */
 .gallery-controls {
